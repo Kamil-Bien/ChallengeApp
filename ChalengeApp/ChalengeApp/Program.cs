@@ -1,21 +1,23 @@
-﻿string name = "Rysio";
-char sex = 'M'; //M = Male
-                //F = Female
-int age = 33;
+﻿int number = 4566;
+string numberInString = number.ToString();
+char[] letters = numberInString.ToArray();
+int[] countNumber = new int[10];
 
-if (sex == 'F' && age < 30)
-{
-    Console.WriteLine("Kobieta poniżej 30 lat");
+
+
+foreach (var oneNumber  in letters)
+{	
+    for (int i = 0; i < 10; i++)
+	{
+		string iString = i.ToString();
+        string oneNumberString = oneNumber.ToString();
+        if (iString == oneNumberString)
+		{
+			countNumber[i]++;
+		}
+	}
 }
-else if (name == "Ewa" && age == 33)
+for (int i = 0; i < 10; i++)
 {
-    Console.WriteLine("Ewa, lat 33");
-}
-else if (age < 18 && sex == 'M')
-{
-    Console.WriteLine("Niepełnoletni Mężczyzna");
-}
-else
-{
-    Console.WriteLine("To tylko Rysio");
+    Console.WriteLine(i + " => " + countNumber[i]);
 }

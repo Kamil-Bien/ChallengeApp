@@ -22,6 +22,8 @@ worker3.AddScore(6);
 worker3.AddScore(2);
 worker3.AddScore(5);
 worker3.AddScore(5);
+worker3.SubtractScore(13);
+
 
 List<Employee> workers = new List<Employee>()
 {
@@ -70,6 +72,6 @@ else
     {
         Console.WriteLine();
         Console.WriteLine(bestWorkers.name + " " + bestWorkers.surname + ", wiek: " + bestWorkers.age + " lat, uzyskał wynik: " + bestWorkers.Result + "pkt");
-        Console.WriteLine();
+        
     }
 }
